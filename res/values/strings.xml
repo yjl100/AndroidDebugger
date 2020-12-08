@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">创维调试器</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="select_tip">请选择下面的选项:</string>
+    <string name="start">开始</string>
+    <string name="stop">停止</string>
+    <string name="cmd_hint">请输入命令</string>
+    <string name="test">------------------------------------------\n---欢迎使用创维调试器---\n------------------------------------------\n</string>
+	<!-- 对话框所需要的字符串资源-->
+    <string name="logcat_save_dialog_message">请选择要保存的路径</string>
+    <string name="postive_button">确定</string>
+    <string name="negative_button">取消</string>
+    <string name="removable_storage">(移动存储)</string>
+    <string name="btn_top">到\n顶\n部</string>
+    <string name="btn_bottom">到\n底\n部</string>
+    <string name="btn_next">下\n一\n页</string>
+    <string name="btn_pre">上\n一\n页</string>
+    <string name="btn_clear_screen">清\n屏\n幕</string>
+    <string name="btn_search">查\n找\n串</string>
+    <string name="btn_to_home">回到主页</string>
+    <string name="page_info_txt">1/100</string>
+    <string name="page_tip">页码:</string>
+    <string name="logfile_info">日志保存路径：%1$s     日志大小：%2$s</string>
+    <string name="page_manural_consol_tip">手动命令模式可以翻页，也可以通过聚焦控制台按上下键滑动浏览。</string>
+    <string name="show_in_consol">控制台显示</string>
+    <string name="scan_in_consol">日志打印完成后是否浏览</string>
+    <string name="wait_callback">等待返回 (手动输入使用)</string>
+    <string name="help_btn">点此看如何使用</string>
+    <string name="help_dialog_title">关于软件</string>
+    <string name="tip">提示</string>
+    <string name="close_logcat_reader">是否关闭当前浏览的日志文件？</string>
+    <string name="help_dialog_content">创维调试器:\n\t此软主要是致力于模仿在盒端没有串口和adb关闭等情况下，对机顶盒内部命令进行模拟。软件执行权限是system用户权限，如果运行的命令需要root或者shell等用户权限，则不能运行。\n
+        \t目前支持的功能有：打开logcat，清打印后开logcat，手动输入命令(如ls、cp、ps、busybox等等)。\n\n
+        \t日志功能：\n
+        \t1.打开logcat：此功能不清除系统logcat缓存，直接执行logcat -vtime命令，可用于抓开机打印。\n
+        \t2.清打印后开logcat：此功能清除系统logcat缓存，后执行logcat -vtime命令，可用于抓取即时打印。\n
+        \t日志功能在使用时，如果想直接抓打印到移动存储，那么直接在开打印选中后选择开始，弹出对话框选择保存路径，确定即可，然后按HOME键将应用压入后台，软件会在后台启动线程进行日志抓取，用户这时就可以操作需要抓取的日志了，操作完成后，启动app，按停止按钮会停止抓打印或返回BACK键会停止抓打印并退出应用，如果所持有的遥控器home键值不匹配，可以按"回到主页"按钮即可进入home的launcher主页。\n\n
+        \t其他功能：\n
+        \t3.手动输入命令：手动输入命令可以输入任意命令执行，如系统中常用的常用命令如ls、cp、ps、busybox等，也可执行sh -c命令进行脚本执行，但是不用系统里执行sh -c "busybox top | grep ..."这种命令管道方式等有时候不能成功，最好用第四项“手动输入脚本(shell)命令”，需要注意。\n\n
+        \t4.手动输入脚本(shell)命令：此可执行sh -c命令进行脚本执行。如果要执行sh -c 命令，最好选中这个选项。\n\n
+        \t选项说明：\n
+        \t“控制台显示”：此选项是命令执行后获取的内容是否显示在控制台里。\n
+        \t“Logcat完成后是否浏览”：此选项是在打印抓完，按停止按钮后，是否可以在控制台进行浏览日志信息，控制台会显示日志页数，上下翻页按钮等进行查看操作，一页默认是40行数据，一页如果40行过长超出部分可以将焦点选中到控制台按上下键查看。\n
+        \t“等待返回(手动输入使用)”：此选项是用户在使用手动输入命令时使用，主要作用是用户输入的一些命令需要执行后返回字符，那么我们需要将此选项打开，如果命令不是返回字符形式的，如tcpdump等一些命令，需要关闭此选项方能正常执行并关闭。\n\n
+        \t注意：\n
+        \t手动输入的命令，android不同系统执行权限不一样，如在4.4系统里tcpdump命令system用户的app没有执行权限，但在5.1系统里可以执行，如下：5.1抓取网络包需要选中手动输入选项，在输入框输入命令如：tcpdump -i eth0 -s0 -w /mnt/sda/sda1/1.pcap，然后将等待返回开关关闭，然后点击开始启动，点击停止抓取.\n
+        \t在logcat完成后浏览时，如果文件比较大，会造成oom，如果实时读取本地文件也会比较慢，后面将读写文件用java的nio的文件内存映射方式进行读写，解决了内存中读取自定字符问题，如果文件比较大，几十M或几百M，在打开和翻页时候会有一些卡顿，是不可避免的，即使在windows上打开大文件也会有这种情况。\n
+        \t目前查找字符串功能还没做。\n</string>
+    
+</resources>

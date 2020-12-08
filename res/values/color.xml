@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<resources>  
+    <color name="red">#FF0000</color>  
+    <color name="green">#00FF00</color>
+    <color name="green2">#17C7A4</color>
+    <color name="green3">#00ffdc</color>
+    <color name="blue">#0883D6</color>
+    <color name="white">#ffffff</color>
+    <color name="search_white">#b0ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="epg_blue">#7800CCFF</color>
+    <color name="yellow">#FFFEE702</color>
+    
+</resources> 

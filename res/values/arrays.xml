@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="commond">
+        <item >开打印（清除缓存后）</item>
+        <item >开打印</item>
+        <item >手动输入命令</item>
+        <item >手动输入脚本(shell)命令</item>
+    </string-array>
+    
+</resources>
